@@ -1,0 +1,5 @@
+h = float(input("Height: "))
+a = float(input("Base, first value: "))
+b = float(input("Base, second value: "))
+S = float(h*(a + b)/2)
+print("Expected Output:", S)
