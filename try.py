@@ -1,8 +1,21 @@
-def div_by3n4(n):
-    for divided in range(0, n + 1):
-        if (divided % 4 == 0 and divided % 3 == 0):
-            yield divided
+# compile()
 
-n = int(input("Введите число до которого будут выводится числа кратные 3 и 4 одновременно, начиная с 0: "))
+import re
 
-print(list(div_by3n4(n)))
+text_to_match = "John's email is john.doe@example.com, and his backup is johndoe123@work.net."
+
+pattern = r'\b\w+\b'
+
+def repl(match):
+    matched_word = match.group(0)
+    result = ''
+    for i in range(len(matched_word)):
+        if i % 2 == 0:
+            result += matched_word[i].lower()
+        else:
+            result += matched_word[i].upper()
+    return result
+
+result = re.sub(pattern, repl, text_to_match)
+
+print(result)
