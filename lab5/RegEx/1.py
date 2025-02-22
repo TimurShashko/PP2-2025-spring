@@ -69,19 +69,12 @@ print(re.sub(r"([A-Z])", r" \1", text2))
 #9 Write a Python program to insert spaces between words starting with capital letters.
 print("#9")
 text3 = "CamelCaseStringExample"
-x = re.sub(r"([A-Z])", r" \1", text3)
-if x[0] == " ":
-    x = x[1:]
-
+x = re.sub(r"([a-z])([A-Z])", r"\1 \2", text3)
 print(x)
 
 #10 Write a Python program to convert a given camel case string to snake case.
 print("#10")
 text3 = "CamelCaseStringExample"
-x = re.sub(r"([A-Z])", r" \1", text3)
-if x[0] == " ":
-    x = x[1:]
-
-x2 = re.sub(r"\s", "_", x)
-x2 = x2.lower()
-print(x2)
+x = re.sub(r"([a-z])([A-Z])", r"\1_\2", text3)
+x = x.lower()
+print(x)
