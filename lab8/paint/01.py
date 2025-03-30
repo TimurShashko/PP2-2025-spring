@@ -7,7 +7,6 @@ WIDTH = 800
 HEIGHT = 600
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Extended Paint in Pygame")
 
 # Дополнительный слой, на котором будем хранить нарисованное
 base_layer = pygame.Surface((WIDTH, HEIGHT))
