@@ -54,6 +54,7 @@ def draw_rect(surface, color, start, end, thickness):
     height = abs(end[1] - start[1])
     rect = pygame.Rect(left, top, width, height)
     pygame.draw.rect(surface, color, rect, thickness)
+    pygame.draw.line(surface, color, start, end, thickness)
 
 def draw_square(surface, color, start, end, thickness):
     """

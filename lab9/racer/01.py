@@ -174,7 +174,7 @@ while True:
         all_sprites.add(coin2)  
 
     #Increasing speed of Enemy and Coin in relation to the Coin Score
-    SPEED += (COIN_SCORE//5)/200        
+    SPEED += (COIN_SCORE//5)/100        
          
     pygame.display.update()
     FramePerSec.tick(FPS)
